@@ -1,0 +1,2705 @@
+
+:root {
+    box-sizing:border-box;
+    --cursor-size:30px;
+    --list-height:200px;
+    
+  }
+  
+  @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+  
+  body {
+    background-color:black;
+    font-family: Lato, sans-serif;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    overflow-scroll-behavior: none;
+    /*
+     */
+  }
+  
+  button {
+    cursor:pointer;
+  }
+  
+  h1 {
+    margin:0;
+    color:white;
+  }
+  
+  .css-code-icon {
+    background-color:gold;
+    color:black;
+    border-radius:5px;
+    padding-left:4px;
+    padding-right:4px;
+    font-size:9.5pt;
+  }
+  
+  
+  textarea {
+    background-color: #1D1E22;
+    color: #dacb88;
+    font-size:11pt;
+    line-height:15pt;
+    padding-left:20px;
+    padding-top:10px;
+    border: solid #444444 2px;
+  }
+  
+  .tabs {
+    height:40px;
+  }
+  .tab {
+    position:absolute;
+    top:0px;
+    background-color:silver;
+    border:solid #2d3039 2px;
+    margin-left:5px;
+    padding-left:4px;
+    padding-right:4px;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;  
+    cursor:pointer;
+    box-shadow: black 2px 2px 5px;
+    height:40px;
+  }
+  
+  .tab-active {
+    border-bottom:none;
+    background-color:lightyellow;
+    font-weight:bold;
+    cursor:default;
+   
+  }
+  
+  .tab-disabled {
+    cursor:not-allowed;
+    color:gray;
+  }
+  
+  .tab-cntr {
+    position:absolute;
+    top:30px;
+    bottom:2px;
+    border:solid #2d3039 1px;
+    right:20px;
+    left:2px;
+    background-color:black;
+  }
+  
+  #cntr {
+    position:absolute;
+    top:35px;  
+    bottom:20px;
+    left:20px;
+    right:20px;
+    background-color:white;  
+    cursor:none;
+    border:solid blue;
+    overflow:hidden;
+  }
+  
+  
+  .basic-ani-cursor {
+    position:absolute;
+    background-color:brown;
+    width:var(--cursor-size);
+    height:var(--cursor-size);
+    border:solid orange 4px;
+    rotate:45deg;
+    pointer-events: none;
+    opacity:.8;
+  }
+  
+  .start-ani-cursor {
+    background-color:pink;
+    opacity:.3;
+    font-size:9pt;
+    overflow:hidden;
+    text-align:center;
+  }
+  
+  
+  
+  #hlp {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    text-align:center;
+    pointer-events: none;
+    opacity:.8;
+    font-weight:bold;
+    font-size:20pt;
+    margin-top:60px;
+    color:gray;
+    user-select: none;
+  }
+  
+  #output {
+    position:absolute;
+    left:10px;
+    right:10px;
+    top:10px;
+    bottom:35px;
+  }
+  
+  .buttonStrip {
+    position:absolute;
+    bottom:0px;
+    left:300px;
+    right:0px;
+    background-color: #2D3039;
+    padding:4px;
+  }
+  
+  .buttonStrip > button {
+    border: none;
+    border-radius:4px;
+    background-color: #454856;
+    color:white;
+    font-size:9.5pt;
+    padding:3px;
+    padding-left:8px;
+    padding-right:8px;
+    margin-left:5px;
+  }
+  
+  .stage {
+    position:absolute;
+    background-color:white;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    overflow:hidden;
+  }
+  
+  .btnGenPen {
+    cursor: pointer;
+  }
+  
+  
+  @keyframes attract-hide-ani {
+    0% {
+      opacity:1;
+    }
+    60% {
+      opacity:1;
+    }
+    71% {
+      opacity:0;
+    }
+    100% {
+      opacity:0;
+      display:none;
+    }
+  }
+  
+  #attract {
+    position:absolute;
+    top:5px;
+    left:5px;
+    right:5px;
+    bottom:5px;
+    background: linear-gradient(to bottom, #ffb76b 0%,#ffa73d 29%,#ff7c00 75%,#ff7f04 100%);
+    animation-name: attract-hide-ani;
+    animation-duration:7s;
+    animation-fill-mode:forwards;
+    overflow:hidden;
+    cursor: pointer;
+  }
+  
+  .s-title {
+    text-align:center;
+    font-size:38pt;
+    font-weight:bold;
+    pointer-events: none;
+    padding-top:160px;
+    color:lightyellow;
+  }
+  
+  
+  @keyframes demo1-ani {
+     0% {
+        translate: 0px 0px;
+        }
+     1.5% {
+        translate: 0px -2px;
+        }
+     1.6% {
+        translate: 2px -5px;
+        }
+     1.7% {
+        translate: 4px -8px;
+        }
+     1.9% {
+        translate: 5px -12px;
+        }
+     2% {
+        translate: 7px -17px;
+        }
+     2.1% {
+        translate: 9px -23px;
+        }
+     2.2% {
+        translate: 12px -28px;
+        }
+     2.3% {
+        translate: 13px -33px;
+        }
+     2.4% {
+        translate: 15px -38px;
+        }
+     2.5% {
+        translate: 17px -43px;
+        }
+     2.6% {
+        translate: 18px -48px;
+        }
+     2.7% {
+        translate: 20px -53px;
+        }
+     2.8% {
+        translate: 22px -59px;
+        }
+     2.9% {
+        translate: 24px -66px;
+        }
+     3.1% {
+        translate: 27px -76px;
+        }
+     3.2% {
+        translate: 31px -88px;
+        }
+     3.3% {
+        translate: 34px -101px;
+        }
+     3.4% {
+        translate: 38px -116px;
+        }
+     3.5% {
+        translate: 43px -131px;
+        }
+     3.6% {
+        translate: 48px -145px;
+        }
+     3.7% {
+        translate: 53px -158px;
+        }
+     3.8% {
+        translate: 58px -171px;
+        }
+     3.9% {
+        translate: 62px -182px;
+        }
+     4% {
+        translate: 67px -192px;
+        }
+     4.2% {
+        translate: 72px -201px;
+        }
+     4.3% {
+        translate: 76px -208px;
+        }
+     4.4% {
+        translate: 79px -214px;
+        }
+     4.5% {
+        translate: 83px -220px;
+        }
+     4.6% {
+        translate: 85px -224px;
+        }
+     4.7% {
+        translate: 87px -226px;
+        }
+     4.8% {
+        translate: 90px -230px;
+        }
+     4.9% {
+        translate: 93px -233px;
+        }
+     5% {
+        translate: 96px -237px;
+        }
+     5.2% {
+        translate: 98px -240px;
+        }
+     5.3% {
+        translate: 100px -243px;
+        }
+     5.4% {
+        translate: 102px -243px;
+        }
+     5.6% {
+        translate: 104px -243px;
+        }
+     5.7% {
+        translate: 105px -243px;
+        }
+     5.8% {
+        translate: 106px -241px;
+        }
+     5.9% {
+        translate: 107px -238px;
+        }
+     6% {
+        translate: 108px -235px;
+        }
+     6.2% {
+        translate: 108px -232px;
+        }
+     6.3% {
+        translate: 109px -228px;
+        }
+     6.4% {
+        translate: 109px -224px;
+        }
+     6.5% {
+        translate: 110px -219px;
+        }
+     6.6% {
+        translate: 110px -215px;
+        }
+     6.7% {
+        translate: 110px -211px;
+        }
+     6.8% {
+        translate: 111px -205px;
+        }
+     6.9% {
+        translate: 112px -200px;
+        }
+     7% {
+        translate: 113px -193px;
+        }
+     7.2% {
+        translate: 116px -185px;
+        }
+     7.3% {
+        translate: 118px -177px;
+        }
+     7.4% {
+        translate: 121px -167px;
+        }
+     7.5% {
+        translate: 123px -157px;
+        }
+     7.6% {
+        translate: 126px -146px;
+        }
+     7.7% {
+        translate: 128px -134px;
+        }
+     7.8% {
+        translate: 130px -122px;
+        }
+     7.9% {
+        translate: 131px -111px;
+        }
+     8% {
+        translate: 132px -98px;
+        }
+     8.1% {
+        translate: 133px -87px;
+        }
+     8.3% {
+        translate: 134px -75px;
+        }
+     8.4% {
+        translate: 134px -63px;
+        }
+     8.5% {
+        translate: 134px -51px;
+        }
+     8.6% {
+        translate: 135px -40px;
+        }
+     8.7% {
+        translate: 136px -28px;
+        }
+     8.8% {
+        translate: 137px -17px;
+        }
+     8.9% {
+        translate: 138px -6px;
+        }
+     9% {
+        translate: 139px 4px;
+        }
+     9.1% {
+        translate: 139px 14px;
+        }
+     9.3% {
+        translate: 140px 23px;
+        }
+     9.4% {
+        translate: 142px 32px;
+        }
+     9.5% {
+        translate: 143px 41px;
+        }
+     9.6% {
+        translate: 145px 49px;
+        }
+     9.7% {
+        translate: 147px 58px;
+        }
+     9.8% {
+        translate: 149px 65px;
+        }
+     9.9% {
+        translate: 152px 71px;
+        }
+     10% {
+        translate: 154px 78px;
+        }
+     10.1% {
+        translate: 156px 82px;
+        }
+     10.2% {
+        translate: 158px 86px;
+        }
+     10.4% {
+        translate: 160px 89px;
+        }
+     10.5% {
+        translate: 162px 90px;
+        }
+     10.6% {
+        translate: 163px 91px;
+        }
+     10.7% {
+        translate: 164px 91px;
+        }
+     10.9% {
+        translate: 166px 91px;
+        }
+     11% {
+        translate: 167px 90px;
+        }
+     11.1% {
+        translate: 169px 89px;
+        }
+     11.2% {
+        translate: 171px 87px;
+        }
+     11.4% {
+        translate: 174px 84px;
+        }
+     11.5% {
+        translate: 177px 81px;
+        }
+     11.6% {
+        translate: 180px 77px;
+        }
+     11.7% {
+        translate: 183px 71px;
+        }
+     11.8% {
+        translate: 187px 65px;
+        }
+     11.9% {
+        translate: 191px 58px;
+        }
+     12% {
+        translate: 195px 50px;
+        }
+     12.1% {
+        translate: 199px 41px;
+        }
+     12.2% {
+        translate: 203px 33px;
+        }
+     12.4% {
+        translate: 208px 23px;
+        }
+     12.5% {
+        translate: 212px 14px;
+        }
+     12.6% {
+        translate: 216px 5px;
+        }
+     12.7% {
+        translate: 221px -4px;
+        }
+     12.8% {
+        translate: 225px -12px;
+        }
+     12.9% {
+        translate: 228px -21px;
+        }
+     13% {
+        translate: 233px -29px;
+        }
+     13.1% {
+        translate: 236px -38px;
+        }
+     13.2% {
+        translate: 240px -47px;
+        }
+     13.4% {
+        translate: 245px -59px;
+        }
+     13.5% {
+        translate: 249px -72px;
+        }
+     13.6% {
+        translate: 254px -86px;
+        }
+     13.7% {
+        translate: 260px -100px;
+        }
+     13.8% {
+        translate: 266px -113px;
+        }
+     13.9% {
+        translate: 271px -126px;
+        }
+     14% {
+        translate: 276px -138px;
+        }
+     14.1% {
+        translate: 281px -148px;
+        }
+     14.2% {
+        translate: 285px -159px;
+        }
+     14.3% {
+        translate: 289px -168px;
+        }
+     14.5% {
+        translate: 292px -175px;
+        }
+     14.6% {
+        translate: 294px -181px;
+        }
+     14.7% {
+        translate: 296px -185px;
+        }
+     14.8% {
+        translate: 298px -189px;
+        }
+     14.9% {
+        translate: 298px -191px;
+        }
+     15% {
+        translate: 299px -192px;
+        }
+     15.2% {
+        translate: 300px -192px;
+        }
+     15.6% {
+        translate: 301px -192px;
+        }
+     15.7% {
+        translate: 302px -192px;
+        }
+     15.8% {
+        translate: 303px -191px;
+        }
+     15.9% {
+        translate: 304px -190px;
+        }
+     16% {
+        translate: 305px -188px;
+        }
+     16.1% {
+        translate: 307px -185px;
+        }
+     16.2% {
+        translate: 308px -183px;
+        }
+     16.3% {
+        translate: 310px -179px;
+        }
+     16.4% {
+        translate: 312px -175px;
+        }
+     16.5% {
+        translate: 314px -171px;
+        }
+     16.7% {
+        translate: 316px -166px;
+        }
+     16.8% {
+        translate: 318px -161px;
+        }
+     16.9% {
+        translate: 321px -155px;
+        }
+     17% {
+        translate: 324px -148px;
+        }
+     17.1% {
+        translate: 328px -141px;
+        }
+     17.2% {
+        translate: 331px -132px;
+        }
+     17.3% {
+        translate: 335px -124px;
+        }
+     17.4% {
+        translate: 338px -115px;
+        }
+     17.6% {
+        translate: 342px -107px;
+        }
+     17.7% {
+        translate: 345px -99px;
+        }
+     17.8% {
+        translate: 348px -91px;
+        }
+     17.9% {
+        translate: 351px -83px;
+        }
+     18% {
+        translate: 355px -76px;
+        }
+     18.1% {
+        translate: 358px -67px;
+        }
+     18.2% {
+        translate: 361px -58px;
+        }
+     18.3% {
+        translate: 363px -49px;
+        }
+     18.4% {
+        translate: 366px -39px;
+        }
+     18.6% {
+        translate: 369px -27px;
+        }
+     18.7% {
+        translate: 372px -15px;
+        }
+     18.8% {
+        translate: 374px -3px;
+        }
+     18.9% {
+        translate: 376px 9px;
+        }
+     19% {
+        translate: 378px 21px;
+        }
+     19.1% {
+        translate: 380px 33px;
+        }
+     19.2% {
+        translate: 382px 45px;
+        }
+     19.3% {
+        translate: 384px 57px;
+        }
+     19.4% {
+        translate: 385px 68px;
+        }
+     19.5% {
+        translate: 387px 79px;
+        }
+     19.7% {
+        translate: 389px 88px;
+        }
+     19.8% {
+        translate: 391px 95px;
+        }
+     19.9% {
+        translate: 393px 102px;
+        }
+     20% {
+        translate: 395px 106px;
+        }
+     20.1% {
+        translate: 397px 109px;
+        }
+     20.2% {
+        translate: 400px 111px;
+        }
+     20.3% {
+        translate: 402px 113px;
+        }
+     20.4% {
+        translate: 404px 113px;
+        }
+     20.5% {
+        translate: 406px 113px;
+        }
+     20.7% {
+        translate: 409px 113px;
+        }
+     20.8% {
+        translate: 411px 112px;
+        }
+     20.9% {
+        translate: 415px 109px;
+        }
+     21% {
+        translate: 418px 104px;
+        }
+     21.1% {
+        translate: 421px 99px;
+        }
+     21.2% {
+        translate: 425px 92px;
+        }
+     21.3% {
+        translate: 429px 84px;
+        }
+     21.4% {
+        translate: 433px 76px;
+        }
+     21.5% {
+        translate: 437px 66px;
+        }
+     21.6% {
+        translate: 442px 56px;
+        }
+     21.8% {
+        translate: 447px 46px;
+        }
+     21.9% {
+        translate: 451px 35px;
+        }
+     22% {
+        translate: 457px 24px;
+        }
+     22.1% {
+        translate: 463px 12px;
+        }
+     22.2% {
+        translate: 468px -2px;
+        }
+     22.3% {
+        translate: 475px -16px;
+        }
+     22.4% {
+        translate: 482px -32px;
+        }
+     22.5% {
+        translate: 488px -46px;
+        }
+     22.6% {
+        translate: 495px -63px;
+        }
+     22.7% {
+        translate: 502px -80px;
+        }
+     22.9% {
+        translate: 508px -94px;
+        }
+     23% {
+        translate: 514px -108px;
+        }
+     23.1% {
+        translate: 521px -122px;
+        }
+     23.2% {
+        translate: 528px -134px;
+        }
+     23.3% {
+        translate: 534px -144px;
+        }
+     23.4% {
+        translate: 540px -152px;
+        }
+     23.5% {
+        translate: 545px -158px;
+        }
+     23.6% {
+        translate: 550px -162px;
+        }
+     23.7% {
+        translate: 555px -166px;
+        }
+     23.9% {
+        translate: 559px -167px;
+        }
+     24% {
+        translate: 562px -168px;
+        }
+     24.1% {
+        translate: 566px -168px;
+        }
+     24.2% {
+        translate: 568px -168px;
+        }
+     24.3% {
+        translate: 570px -168px;
+        }
+     24.4% {
+        translate: 572px -167px;
+        }
+     24.5% {
+        translate: 572px -165px;
+        }
+     24.6% {
+        translate: 574px -163px;
+        }
+     24.7% {
+        translate: 575px -161px;
+        }
+     24.9% {
+        translate: 576px -159px;
+        }
+     25% {
+        translate: 577px -157px;
+        }
+     25.1% {
+        translate: 578px -154px;
+        }
+     25.2% {
+        translate: 580px -151px;
+        }
+     25.3% {
+        translate: 581px -147px;
+        }
+     25.4% {
+        translate: 584px -142px;
+        }
+     25.5% {
+        translate: 587px -137px;
+        }
+     25.6% {
+        translate: 590px -131px;
+        }
+     25.7% {
+        translate: 593px -125px;
+        }
+     25.9% {
+        translate: 596px -117px;
+        }
+     26% {
+        translate: 600px -110px;
+        }
+     26.1% {
+        translate: 603px -102px;
+        }
+     26.2% {
+        translate: 605px -95px;
+        }
+     26.3% {
+        translate: 607px -87px;
+        }
+     26.4% {
+        translate: 610px -78px;
+        }
+     26.5% {
+        translate: 612px -71px;
+        }
+     26.6% {
+        translate: 614px -63px;
+        }
+     26.7% {
+        translate: 616px -53px;
+        }
+     26.8% {
+        translate: 617px -44px;
+        }
+     27% {
+        translate: 618px -34px;
+        }
+     27.1% {
+        translate: 619px -22px;
+        }
+     27.2% {
+        translate: 620px -12px;
+        }
+     27.3% {
+        translate: 620px -1px;
+        }
+     27.4% {
+        translate: 620px 10px;
+        }
+     27.5% {
+        translate: 620px 19px;
+        }
+     27.6% {
+        translate: 621px 29px;
+        }
+     27.7% {
+        translate: 621px 37px;
+        }
+     27.8% {
+        translate: 622px 44px;
+        }
+     27.9% {
+        translate: 622px 49px;
+        }
+     28.1% {
+        translate: 624px 53px;
+        }
+     28.2% {
+        translate: 625px 57px;
+        }
+     28.3% {
+        translate: 627px 60px;
+        }
+     28.4% {
+        translate: 630px 62px;
+        }
+     28.5% {
+        translate: 633px 63px;
+        }
+     28.6% {
+        translate: 636px 63px;
+        }
+     28.7% {
+        translate: 639px 63px;
+        }
+     28.8% {
+        translate: 643px 63px;
+        }
+     28.9% {
+        translate: 646px 63px;
+        }
+     29.1% {
+        translate: 651px 62px;
+        }
+     29.2% {
+        translate: 655px 58px;
+        }
+     29.3% {
+        translate: 658px 53px;
+        }
+     29.4% {
+        translate: 663px 47px;
+        }
+     29.5% {
+        translate: 665px 40px;
+        }
+     29.6% {
+        translate: 669px 32px;
+        }
+     29.7% {
+        translate: 672px 24px;
+        }
+     29.8% {
+        translate: 675px 17px;
+        }
+     29.9% {
+        translate: 677px 9px;
+        }
+     30% {
+        translate: 680px 2px;
+        }
+     30.2% {
+        translate: 682px -5px;
+        }
+     30.3% {
+        translate: 685px -12px;
+        }
+     30.4% {
+        translate: 688px -20px;
+        }
+     30.5% {
+        translate: 692px -27px;
+        }
+     30.6% {
+        translate: 696px -34px;
+        }
+     30.7% {
+        translate: 700px -42px;
+        }
+     30.8% {
+        translate: 704px -51px;
+        }
+     30.9% {
+        translate: 710px -60px;
+        }
+     31.1% {
+        translate: 716px -71px;
+        }
+     31.2% {
+        translate: 722px -83px;
+        }
+     31.3% {
+        translate: 728px -97px;
+        }
+     31.4% {
+        translate: 735px -109px;
+        }
+     31.5% {
+        translate: 742px -119px;
+        }
+     31.6% {
+        translate: 748px -128px;
+        }
+     31.7% {
+        translate: 754px -135px;
+        }
+     31.8% {
+        translate: 760px -142px;
+        }
+     31.9% {
+        translate: 767px -149px;
+        }
+     32.1% {
+        translate: 772px -156px;
+        }
+     32.2% {
+        translate: 778px -162px;
+        }
+     32.3% {
+        translate: 783px -168px;
+        }
+     32.4% {
+        translate: 788px -172px;
+        }
+     32.5% {
+        translate: 792px -176px;
+        }
+     32.6% {
+        translate: 798px -180px;
+        }
+     32.7% {
+        translate: 803px -184px;
+        }
+     32.8% {
+        translate: 809px -188px;
+        }
+     32.9% {
+        translate: 816px -193px;
+        }
+     33% {
+        translate: 822px -198px;
+        }
+     33.2% {
+        translate: 830px -204px;
+        }
+     33.3% {
+        translate: 837px -210px;
+        }
+     33.4% {
+        translate: 843px -215px;
+        }
+     33.5% {
+        translate: 848px -217px;
+        }
+     33.6% {
+        translate: 851px -217px;
+        }
+     33.7% {
+        translate: 854px -217px;
+        }
+     33.8% {
+        translate: 856px -216px;
+        }
+     33.9% {
+        translate: 858px -214px;
+        }
+     34% {
+        translate: 860px -212px;
+        }
+     34.1% {
+        translate: 862px -209px;
+        }
+     34.3% {
+        translate: 865px -205px;
+        }
+     34.4% {
+        translate: 867px -201px;
+        }
+     34.5% {
+        translate: 868px -197px;
+        }
+     34.6% {
+        translate: 870px -192px;
+        }
+     34.7% {
+        translate: 872px -187px;
+        }
+     34.8% {
+        translate: 873px -181px;
+        }
+     34.9% {
+        translate: 875px -174px;
+        }
+     35% {
+        translate: 877px -167px;
+        }
+     35.1% {
+        translate: 879px -158px;
+        }
+     35.3% {
+        translate: 881px -149px;
+        }
+     35.4% {
+        translate: 884px -140px;
+        }
+     35.5% {
+        translate: 887px -129px;
+        }
+     35.6% {
+        translate: 890px -119px;
+        }
+     35.7% {
+        translate: 891px -109px;
+        }
+     35.8% {
+        translate: 893px -99px;
+        }
+     35.9% {
+        translate: 894px -89px;
+        }
+     36% {
+        translate: 895px -80px;
+        }
+     36.1% {
+        translate: 896px -71px;
+        }
+     36.3% {
+        translate: 896px -61px;
+        }
+     36.4% {
+        translate: 896px -53px;
+        }
+     36.5% {
+        translate: 896px -44px;
+        }
+     36.6% {
+        translate: 897px -34px;
+        }
+     36.7% {
+        translate: 897px -25px;
+        }
+     36.8% {
+        translate: 898px -15px;
+        }
+     36.9% {
+        translate: 900px -5px;
+        }
+     37% {
+        translate: 901px 4px;
+        }
+     37.1% {
+        translate: 903px 12px;
+        }
+     37.3% {
+        translate: 905px 21px;
+        }
+     37.4% {
+        translate: 908px 29px;
+        }
+     37.5% {
+        translate: 910px 36px;
+        }
+     37.6% {
+        translate: 913px 41px;
+        }
+     37.7% {
+        translate: 915px 44px;
+        }
+     37.8% {
+        translate: 917px 46px;
+        }
+     37.9% {
+        translate: 920px 46px;
+        }
+     38% {
+        translate: 922px 46px;
+        }
+     38.1% {
+        translate: 926px 46px;
+        }
+     38.2% {
+        translate: 929px 45px;
+        }
+     38.4% {
+        translate: 934px 42px;
+        }
+     38.5% {
+        translate: 939px 38px;
+        }
+     38.6% {
+        translate: 944px 33px;
+        }
+     38.7% {
+        translate: 949px 27px;
+        }
+     38.8% {
+        translate: 956px 21px;
+        }
+     38.9% {
+        translate: 961px 14px;
+        }
+     39% {
+        translate: 966px 7px;
+        }
+     39.1% {
+        translate: 972px 0px;
+        }
+     39.2% {
+        translate: 976px -7px;
+        }
+     39.3% {
+        translate: 981px -14px;
+        }
+     39.5% {
+        translate: 986px -21px;
+        }
+     39.6% {
+        translate: 991px -28px;
+        }
+     39.7% {
+        translate: 997px -37px;
+        }
+     39.8% {
+        translate: 1003px -46px;
+        }
+     39.9% {
+        translate: 1008px -55px;
+        }
+     40% {
+        translate: 1013px -63px;
+        }
+     40.1% {
+        translate: 1019px -71px;
+        }
+     40.2% {
+        translate: 1024px -78px;
+        }
+     40.3% {
+        translate: 1030px -85px;
+        }
+     40.5% {
+        translate: 1035px -93px;
+        }
+     40.6% {
+        translate: 1040px -99px;
+        }
+     40.7% {
+        translate: 1044px -105px;
+        }
+     40.8% {
+        translate: 1047px -110px;
+        }
+     40.9% {
+        translate: 1049px -113px;
+        }
+     41% {
+        translate: 1049px -116px;
+        }
+     41.1% {
+        translate: 1050px -117px;
+        }
+     41.6% {
+        translate: 1048px -119px;
+        }
+     41.7% {
+        translate: 1043px -122px;
+        }
+     41.8% {
+        translate: 1038px -127px;
+        }
+     41.9% {
+        translate: 1033px -131px;
+        }
+     42% {
+        translate: 1028px -136px;
+        }
+     42.1% {
+        translate: 1023px -140px;
+        }
+     42.2% {
+        translate: 1018px -145px;
+        }
+     42.3% {
+        translate: 1013px -148px;
+        }
+     42.4% {
+        translate: 1010px -152px;
+        }
+     42.6% {
+        translate: 1007px -154px;
+        }
+     42.7% {
+        translate: 1004px -156px;
+        }
+     42.8% {
+        translate: 1002px -158px;
+        }
+     42.9% {
+        translate: 999px -159px;
+        }
+     43% {
+        translate: 997px -160px;
+        }
+     43.1% {
+        translate: 994px -161px;
+        }
+     43.2% {
+        translate: 990px -163px;
+        }
+     43.3% {
+        translate: 986px -164px;
+        }
+     43.4% {
+        translate: 981px -165px;
+        }
+     43.6% {
+        translate: 976px -165px;
+        }
+     43.7% {
+        translate: 970px -166px;
+        }
+     43.8% {
+        translate: 963px -166px;
+        }
+     43.9% {
+        translate: 956px -166px;
+        }
+     44% {
+        translate: 948px -166px;
+        }
+     44.1% {
+        translate: 940px -167px;
+        }
+     44.2% {
+        translate: 932px -167px;
+        }
+     44.3% {
+        translate: 923px -168px;
+        }
+     44.4% {
+        translate: 914px -168px;
+        }
+     44.6% {
+        translate: 905px -168px;
+        }
+     44.7% {
+        translate: 896px -168px;
+        }
+     44.8% {
+        translate: 886px -168px;
+        }
+     44.9% {
+        translate: 877px -168px;
+        }
+     45% {
+        translate: 867px -165px;
+        }
+     45.1% {
+        translate: 857px -161px;
+        }
+     45.2% {
+        translate: 847px -155px;
+        }
+     45.3% {
+        translate: 837px -147px;
+        }
+     45.4% {
+        translate: 829px -139px;
+        }
+     45.5% {
+        translate: 820px -129px;
+        }
+     45.7% {
+        translate: 813px -118px;
+        }
+     45.8% {
+        translate: 807px -108px;
+        }
+     45.9% {
+        translate: 801px -98px;
+        }
+     46% {
+        translate: 795px -88px;
+        }
+     46.2% {
+        translate: 792px -78px;
+        }
+     46.2% {
+        translate: 788px -69px;
+        }
+     46.3% {
+        translate: 786px -61px;
+        }
+     46.4% {
+        translate: 785px -54px;
+        }
+     46.5% {
+        translate: 784px -47px;
+        }
+     46.6% {
+        translate: 784px -39px;
+        }
+     46.8% {
+        translate: 784px -32px;
+        }
+     46.9% {
+        translate: 784px -23px;
+        }
+     47% {
+        translate: 784px -13px;
+        }
+     47.1% {
+        translate: 784px -3px;
+        }
+     47.2% {
+        translate: 784px 6px;
+        }
+     47.3% {
+        translate: 784px 16px;
+        }
+     47.4% {
+        translate: 783px 25px;
+        }
+     47.5% {
+        translate: 781px 35px;
+        }
+     47.7% {
+        translate: 777px 46px;
+        }
+     47.8% {
+        translate: 773px 56px;
+        }
+     47.9% {
+        translate: 767px 65px;
+        }
+     48% {
+        translate: 760px 75px;
+        }
+     48.1% {
+        translate: 753px 82px;
+        }
+     48.2% {
+        translate: 745px 90px;
+        }
+     48.3% {
+        translate: 736px 97px;
+        }
+     48.4% {
+        translate: 728px 102px;
+        }
+     48.5% {
+        translate: 720px 105px;
+        }
+     48.6% {
+        translate: 712px 108px;
+        }
+     48.8% {
+        translate: 704px 111px;
+        }
+     48.9% {
+        translate: 696px 113px;
+        }
+     49% {
+        translate: 689px 115px;
+        }
+     49.1% {
+        translate: 682px 116px;
+        }
+     49.2% {
+        translate: 674px 117px;
+        }
+     49.3% {
+        translate: 666px 117px;
+        }
+     49.4% {
+        translate: 659px 117px;
+        }
+     49.5% {
+        translate: 651px 117px;
+        }
+     49.6% {
+        translate: 643px 117px;
+        }
+     49.8% {
+        translate: 635px 117px;
+        }
+     49.9% {
+        translate: 627px 115px;
+        }
+     50% {
+        translate: 620px 112px;
+        }
+     50.1% {
+        translate: 613px 109px;
+        }
+     50.2% {
+        translate: 606px 107px;
+        }
+     50.3% {
+        translate: 600px 104px;
+        }
+     50.4% {
+        translate: 595px 101px;
+        }
+     50.5% {
+        translate: 591px 99px;
+        }
+     50.6% {
+        translate: 588px 97px;
+        }
+     50.7% {
+        translate: 586px 96px;
+        }
+     50.9% {
+        translate: 586px 95px;
+        }
+     51.1% {
+        translate: 586px 94px;
+        }
+     51.2% {
+        translate: 586px 93px;
+        }
+     51.3% {
+        translate: 586px 90px;
+        }
+     51.4% {
+        translate: 586px 85px;
+        }
+     51.5% {
+        translate: 587px 79px;
+        }
+     51.6% {
+        translate: 587px 73px;
+        }
+     51.7% {
+        translate: 588px 68px;
+        }
+     51.9% {
+        translate: 590px 63px;
+        }
+     52% {
+        translate: 592px 59px;
+        }
+     52.1% {
+        translate: 595px 56px;
+        }
+     52.2% {
+        translate: 598px 53px;
+        }
+     52.3% {
+        translate: 602px 50px;
+        }
+     52.4% {
+        translate: 607px 48px;
+        }
+     52.5% {
+        translate: 612px 45px;
+        }
+     52.6% {
+        translate: 618px 43px;
+        }
+     52.7% {
+        translate: 625px 41px;
+        }
+     52.8% {
+        translate: 633px 38px;
+        }
+     53% {
+        translate: 640px 35px;
+        }
+     53.1% {
+        translate: 648px 33px;
+        }
+     53.2% {
+        translate: 657px 30px;
+        }
+     53.3% {
+        translate: 665px 27px;
+        }
+     53.4% {
+        translate: 675px 23px;
+        }
+     53.5% {
+        translate: 684px 19px;
+        }
+     53.6% {
+        translate: 693px 17px;
+        }
+     53.7% {
+        translate: 702px 13px;
+        }
+     53.9% {
+        translate: 712px 10px;
+        }
+     54% {
+        translate: 722px 8px;
+        }
+     54.1% {
+        translate: 731px 5px;
+        }
+     54.2% {
+        translate: 741px 2px;
+        }
+     54.3% {
+        translate: 751px -2px;
+        }
+     54.4% {
+        translate: 760px -5px;
+        }
+     54.5% {
+        translate: 770px -9px;
+        }
+     54.6% {
+        translate: 779px -13px;
+        }
+     54.7% {
+        translate: 788px -17px;
+        }
+     54.8% {
+        translate: 797px -22px;
+        }
+     55% {
+        translate: 805px -27px;
+        }
+     55.1% {
+        translate: 812px -30px;
+        }
+     55.2% {
+        translate: 818px -34px;
+        }
+     55.3% {
+        translate: 823px -37px;
+        }
+     55.4% {
+        translate: 827px -40px;
+        }
+     55.5% {
+        translate: 831px -43px;
+        }
+     55.6% {
+        translate: 834px -45px;
+        }
+     55.7% {
+        translate: 836px -47px;
+        }
+     55.8% {
+        translate: 838px -49px;
+        }
+     56% {
+        translate: 840px -50px;
+        }
+     56.1% {
+        translate: 841px -51px;
+        }
+     56.8% {
+        translate: 840px -51px;
+        }
+     56.9% {
+        translate: 839px -51px;
+        }
+     57.1% {
+        translate: 838px -51px;
+        }
+     57.2% {
+        translate: 837px -51px;
+        }
+     57.3% {
+        translate: 835px -51px;
+        }
+     57.4% {
+        translate: 832px -51px;
+        }
+     57.5% {
+        translate: 830px -51px;
+        }
+     57.6% {
+        translate: 826px -51px;
+        }
+     57.7% {
+        translate: 822px -51px;
+        }
+     57.8% {
+        translate: 817px -51px;
+        }
+     57.9% {
+        translate: 811px -52px;
+        }
+     58.1% {
+        translate: 804px -53px;
+        }
+     58.2% {
+        translate: 796px -56px;
+        }
+     58.3% {
+        translate: 787px -58px;
+        }
+     58.4% {
+        translate: 778px -60px;
+        }
+     58.5% {
+        translate: 768px -62px;
+        }
+     58.6% {
+        translate: 758px -63px;
+        }
+     58.7% {
+        translate: 747px -64px;
+        }
+     58.8% {
+        translate: 735px -65px;
+        }
+     58.9% {
+        translate: 724px -65px;
+        }
+     59% {
+        translate: 712px -65px;
+        }
+     59.2% {
+        translate: 699px -65px;
+        }
+     59.3% {
+        translate: 686px -65px;
+        }
+     59.4% {
+        translate: 673px -65px;
+        }
+     59.5% {
+        translate: 658px -65px;
+        }
+     59.6% {
+        translate: 645px -65px;
+        }
+     59.7% {
+        translate: 631px -63px;
+        }
+     59.8% {
+        translate: 617px -62px;
+        }
+     59.9% {
+        translate: 604px -61px;
+        }
+     60% {
+        translate: 591px -59px;
+        }
+     60.2% {
+        translate: 578px -59px;
+        }
+     60.3% {
+        translate: 565px -59px;
+        }
+     60.4% {
+        translate: 552px -59px;
+        }
+     60.5% {
+        translate: 539px -59px;
+        }
+     60.6% {
+        translate: 526px -59px;
+        }
+     60.7% {
+        translate: 511px -59px;
+        }
+     60.8% {
+        translate: 497px -59px;
+        }
+     60.9% {
+        translate: 483px -59px;
+        }
+     61% {
+        translate: 467px -59px;
+        }
+     61.2% {
+        translate: 451px -59px;
+        }
+     61.3% {
+        translate: 436px -59px;
+        }
+     61.4% {
+        translate: 418px -59px;
+        }
+     61.5% {
+        translate: 402px -59px;
+        }
+     61.6% {
+        translate: 386px -59px;
+        }
+     61.7% {
+        translate: 368px -59px;
+        }
+     61.8% {
+        translate: 352px -59px;
+        }
+     61.9% {
+        translate: 336px -59px;
+        }
+     62% {
+        translate: 321px -59px;
+        }
+     62.1% {
+        translate: 307px -59px;
+        }
+     62.3% {
+        translate: 293px -59px;
+        }
+     62.4% {
+        translate: 278px -58px;
+        }
+     62.5% {
+        translate: 264px -57px;
+        }
+     62.6% {
+        translate: 251px -56px;
+        }
+     62.7% {
+        translate: 237px -54px;
+        }
+     62.8% {
+        translate: 223px -53px;
+        }
+     62.9% {
+        translate: 210px -52px;
+        }
+     63% {
+        translate: 195px -51px;
+        }
+     63.1% {
+        translate: 182px -50px;
+        }
+     63.3% {
+        translate: 169px -49px;
+        }
+     63.4% {
+        translate: 155px -47px;
+        }
+     63.5% {
+        translate: 143px -46px;
+        }
+     63.6% {
+        translate: 131px -45px;
+        }
+     63.7% {
+        translate: 118px -44px;
+        }
+     63.8% {
+        translate: 107px -44px;
+        }
+     63.9% {
+        translate: 96px -43px;
+        }
+     64% {
+        translate: 84px -43px;
+        }
+     64.1% {
+        translate: 75px -43px;
+        }
+     64.2% {
+        translate: 66px -43px;
+        }
+     64.4% {
+        translate: 57px -43px;
+        }
+     64.5% {
+        translate: 50px -43px;
+        }
+     64.6% {
+        translate: 43px -43px;
+        }
+     64.7% {
+        translate: 36px -43px;
+        }
+     64.8% {
+        translate: 31px -43px;
+        }
+     64.9% {
+        translate: 27px -44px;
+        }
+     65% {
+        translate: 23px -45px;
+        }
+     65.1% {
+        translate: 19px -45px;
+        }
+     65.2% {
+        translate: 17px -46px;
+        }
+     65.4% {
+        translate: 15px -46px;
+        }
+     65.5% {
+        translate: 14px -46px;
+        }
+     66% {
+        translate: 16px -46px;
+        }
+     66.1% {
+        translate: 18px -46px;
+        }
+     66.2% {
+        translate: 22px -46px;
+        }
+     66.4% {
+        translate: 27px -46px;
+        }
+     66.5% {
+        translate: 33px -46px;
+        }
+     66.6% {
+        translate: 39px -46px;
+        }
+     66.7% {
+        translate: 48px -45px;
+        }
+     66.8% {
+        translate: 56px -45px;
+        }
+     66.9% {
+        translate: 66px -45px;
+        }
+     67% {
+        translate: 78px -45px;
+        }
+     67.1% {
+        translate: 90px -47px;
+        }
+     67.2% {
+        translate: 104px -49px;
+        }
+     67.4% {
+        translate: 119px -52px;
+        }
+     67.5% {
+        translate: 132px -56px;
+        }
+     67.6% {
+        translate: 147px -59px;
+        }
+     67.7% {
+        translate: 163px -62px;
+        }
+     67.8% {
+        translate: 178px -65px;
+        }
+     67.9% {
+        translate: 194px -68px;
+        }
+     68% {
+        translate: 210px -71px;
+        }
+     68.1% {
+        translate: 227px -73px;
+        }
+     68.2% {
+        translate: 245px -76px;
+        }
+     68.3% {
+        translate: 262px -78px;
+        }
+     68.5% {
+        translate: 280px -80px;
+        }
+     68.6% {
+        translate: 299px -81px;
+        }
+     68.7% {
+        translate: 317px -83px;
+        }
+     68.8% {
+        translate: 336px -83px;
+        }
+     68.9% {
+        translate: 357px -84px;
+        }
+     69% {
+        translate: 376px -85px;
+        }
+     69.1% {
+        translate: 395px -86px;
+        }
+     69.2% {
+        translate: 415px -87px;
+        }
+     69.3% {
+        translate: 434px -88px;
+        }
+     69.4% {
+        translate: 454px -88px;
+        }
+     69.6% {
+        translate: 474px -90px;
+        }
+     69.7% {
+        translate: 492px -90px;
+        }
+     69.8% {
+        translate: 512px -92px;
+        }
+     69.9% {
+        translate: 533px -93px;
+        }
+     70% {
+        translate: 552px -94px;
+        }
+     70.1% {
+        translate: 572px -95px;
+        }
+     70.2% {
+        translate: 593px -95px;
+        }
+     70.3% {
+        translate: 613px -96px;
+        }
+     70.4% {
+        translate: 634px -96px;
+        }
+     70.6% {
+        translate: 655px -96px;
+        }
+     70.7% {
+        translate: 675px -96px;
+        }
+     70.8% {
+        translate: 694px -96px;
+        }
+     70.9% {
+        translate: 713px -95px;
+        }
+     71% {
+        translate: 731px -94px;
+        }
+     71.1% {
+        translate: 749px -93px;
+        }
+     71.2% {
+        translate: 767px -92px;
+        }
+     71.3% {
+        translate: 783px -91px;
+        }
+     71.4% {
+        translate: 799px -90px;
+        }
+     71.6% {
+        translate: 815px -90px;
+        }
+     71.7% {
+        translate: 830px -90px;
+        }
+     71.8% {
+        translate: 846px -90px;
+        }
+     71.9% {
+        translate: 862px -90px;
+        }
+     72% {
+        translate: 877px -90px;
+        }
+     72.1% {
+        translate: 892px -90px;
+        }
+     72.2% {
+        translate: 908px -90px;
+        }
+     72.3% {
+        translate: 922px -91px;
+        }
+     72.4% {
+        translate: 937px -93px;
+        }
+     72.5% {
+        translate: 951px -94px;
+        }
+     72.7% {
+        translate: 964px -95px;
+        }
+     72.8% {
+        translate: 976px -95px;
+        }
+     72.9% {
+        translate: 988px -95px;
+        }
+     73% {
+        translate: 998px -95px;
+        }
+     73.1% {
+        translate: 1007px -95px;
+        }
+     73.2% {
+        translate: 1015px -95px;
+        }
+     73.3% {
+        translate: 1021px -94px;
+        }
+     73.4% {
+        translate: 1026px -93px;
+        }
+     73.6% {
+        translate: 1030px -91px;
+        }
+     73.7% {
+        translate: 1031px -91px;
+        }
+     73.8% {
+        translate: 1032px -90px;
+        }
+     74.2% {
+        translate: 1030px -90px;
+        }
+     74.3% {
+        translate: 1026px -90px;
+        }
+     74.4% {
+        translate: 1020px -90px;
+        }
+     74.5% {
+        translate: 1014px -90px;
+        }
+     74.7% {
+        translate: 1007px -90px;
+        }
+     74.8% {
+        translate: 999px -89px;
+        }
+     74.9% {
+        translate: 991px -88px;
+        }
+     75% {
+        translate: 982px -86px;
+        }
+     75.1% {
+        translate: 973px -85px;
+        }
+     75.2% {
+        translate: 962px -83px;
+        }
+     75.3% {
+        translate: 950px -80px;
+        }
+     75.4% {
+        translate: 937px -77px;
+        }
+     75.5% {
+        translate: 923px -75px;
+        }
+     75.6% {
+        translate: 909px -72px;
+        }
+     75.8% {
+        translate: 893px -70px;
+        }
+     75.9% {
+        translate: 879px -68px;
+        }
+     76% {
+        translate: 864px -66px;
+        }
+     76.1% {
+        translate: 848px -66px;
+        }
+     76.2% {
+        translate: 833px -65px;
+        }
+     76.3% {
+        translate: 817px -65px;
+        }
+     76.4% {
+        translate: 800px -65px;
+        }
+     76.5% {
+        translate: 783px -65px;
+        }
+     76.6% {
+        translate: 766px -65px;
+        }
+     76.7% {
+        translate: 748px -65px;
+        }
+     76.9% {
+        translate: 731px -66px;
+        }
+     77% {
+        translate: 713px -66px;
+        }
+     77.1% {
+        translate: 694px -66px;
+        }
+     77.2% {
+        translate: 675px -66px;
+        }
+     77.3% {
+        translate: 657px -66px;
+        }
+     77.4% {
+        translate: 636px -66px;
+        }
+     77.5% {
+        translate: 617px -66px;
+        }
+     77.6% {
+        translate: 598px -66px;
+        }
+     77.7% {
+        translate: 577px -64px;
+        }
+     77.9% {
+        translate: 558px -63px;
+        }
+     78% {
+        translate: 538px -62px;
+        }
+     78.1% {
+        translate: 518px -61px;
+        }
+     78.2% {
+        translate: 500px -60px;
+        }
+     78.3% {
+        translate: 482px -60px;
+        }
+     78.4% {
+        translate: 463px -59px;
+        }
+     78.5% {
+        translate: 447px -59px;
+        }
+     78.6% {
+        translate: 430px -59px;
+        }
+     78.7% {
+        translate: 412px -59px;
+        }
+     78.9% {
+        translate: 396px -59px;
+        }
+     79% {
+        translate: 380px -59px;
+        }
+     79.1% {
+        translate: 363px -59px;
+        }
+     79.2% {
+        translate: 348px -59px;
+        }
+     79.3% {
+        translate: 332px -59px;
+        }
+     79.4% {
+        translate: 317px -59px;
+        }
+     79.5% {
+        translate: 303px -59px;
+        }
+     79.6% {
+        translate: 289px -58px;
+        }
+     79.7% {
+        translate: 275px -57px;
+        }
+     79.9% {
+        translate: 263px -56px;
+        }
+     80% {
+        translate: 251px -56px;
+        }
+     80.1% {
+        translate: 240px -56px;
+        }
+     80.2% {
+        translate: 231px -55px;
+        }
+     80.3% {
+        translate: 221px -55px;
+        }
+     80.4% {
+        translate: 211px -55px;
+        }
+     80.5% {
+        translate: 203px -55px;
+        }
+     80.6% {
+        translate: 194px -54px;
+        }
+     80.7% {
+        translate: 185px -54px;
+        }
+     80.8% {
+        translate: 177px -52px;
+        }
+     81% {
+        translate: 168px -50px;
+        }
+     81.1% {
+        translate: 159px -48px;
+        }
+     81.2% {
+        translate: 151px -45px;
+        }
+     81.3% {
+        translate: 143px -42px;
+        }
+     81.4% {
+        translate: 135px -39px;
+        }
+     81.5% {
+        translate: 127px -36px;
+        }
+     81.6% {
+        translate: 120px -33px;
+        }
+     81.7% {
+        translate: 112px -30px;
+        }
+     81.8% {
+        translate: 106px -29px;
+        }
+     82% {
+        translate: 99px -27px;
+        }
+     82.1% {
+        translate: 93px -27px;
+        }
+     82.2% {
+        translate: 88px -27px;
+        }
+     82.3% {
+        translate: 84px -27px;
+        }
+     82.4% {
+        translate: 80px -27px;
+        }
+     82.5% {
+        translate: 78px -27px;
+        }
+     82.6% {
+        translate: 76px -27px;
+        }
+     82.7% {
+        translate: 74px -27px;
+        }
+     82.8% {
+        translate: 73px -27px;
+        }
+     82.9% {
+        translate: 72px -27px;
+        }
+     84.5% {
+        translate: 73px -27px;
+        }
+     84.7% {
+        translate: 74px -27px;
+        }
+     85.1% {
+        translate: 75px -27px;
+        }
+     85.3% {
+        translate: 76px -27px;
+        }
+     85.4% {
+        translate: 77px -27px;
+        }
+     85.7% {
+        translate: 78px -27px;
+        }
+     85.9% {
+        translate: 79px -27px;
+        }
+     86.8% {
+        translate: 78px -27px;
+        }
+     86.9% {
+        translate: 77px -27px;
+        }
+     87% {
+        translate: 75px -27px;
+        }
+     87.2% {
+        translate: 73px -27px;
+        }
+     87.3% {
+        translate: 71px -27px;
+        }
+     87.4% {
+        translate: 68px -27px;
+        }
+     87.5% {
+        translate: 65px -28px;
+        }
+     87.6% {
+        translate: 60px -28px;
+        }
+     87.7% {
+        translate: 56px -29px;
+        }
+     87.8% {
+        translate: 52px -30px;
+        }
+     87.9% {
+        translate: 47px -31px;
+        }
+     88% {
+        translate: 43px -32px;
+        }
+     88.1% {
+        translate: 40px -33px;
+        }
+     88.3% {
+        translate: 37px -33px;
+        }
+     88.4% {
+        translate: 35px -34px;
+        }
+     88.5% {
+        translate: 34px -34px;
+        }
+     88.6% {
+        translate: 34px -35px;
+        }
+     88.7% {
+        translate: 34px -36px;
+        }
+     88.8% {
+        translate: 34px -37px;
+        }
+     89% {
+        translate: 34px -39px;
+        }
+     89.1% {
+        translate: 34px -42px;
+        }
+     89.3% {
+        translate: 34px -49px;
+        }
+     89.4% {
+        translate: 35px -59px;
+        }
+     89.5% {
+        translate: 35px -71px;
+        }
+     89.6% {
+        translate: 35px -83px;
+        }
+     89.7% {
+        translate: 35px -94px;
+        }
+     89.8% {
+        translate: 35px -105px;
+        }
+     89.9% {
+        translate: 35px -113px;
+        }
+     90% {
+        translate: 35px -120px;
+        }
+     90.1% {
+        translate: 35px -126px;
+        }
+     90.3% {
+        translate: 35px -131px;
+        }
+     90.4% {
+        translate: 34px -134px;
+        }
+     90.5% {
+        translate: 34px -138px;
+        }
+     90.6% {
+        translate: 34px -142px;
+        }
+     90.7% {
+        translate: 33px -147px;
+        }
+     90.8% {
+        translate: 33px -154px;
+        }
+     90.9% {
+        translate: 33px -161px;
+        }
+     91% {
+        translate: 33px -169px;
+        }
+     91.1% {
+        translate: 33px -177px;
+        }
+     91.3% {
+        translate: 33px -183px;
+        }
+     91.4% {
+        translate: 33px -189px;
+        }
+     91.5% {
+        translate: 33px -194px;
+        }
+     91.6% {
+        translate: 33px -197px;
+        }
+     91.7% {
+        translate: 33px -200px;
+        }
+     91.9% {
+        translate: 33px -201px;
+        }
+     92.2% {
+        translate: 32px -201px;
+        }
+     92.4% {
+        translate: 31px -201px;
+        }
+     92.5% {
+        translate: 29px -201px;
+        }
+     92.6% {
+        translate: 27px -201px;
+        }
+     92.7% {
+        translate: 25px -201px;
+        }
+     92.8% {
+        translate: 24px -201px;
+        }
+     92.9% {
+        translate: 22px -201px;
+        }
+     93.1% {
+        translate: 21px -201px;
+        }
+     93.4% {
+        translate: 20px -200px;
+        }
+     93.5% {
+        translate: 20px -198px;
+        }
+     93.6% {
+        translate: 19px -196px;
+        }
+     93.7% {
+        translate: 19px -192px;
+        }
+     93.8% {
+        translate: 19px -189px;
+        }
+     93.9% {
+        translate: 19px -184px;
+        }
+     94% {
+        translate: 19px -178px;
+        }
+     94.1% {
+        translate: 19px -172px;
+        }
+     94.2% {
+        translate: 19px -165px;
+        }
+     94.3% {
+        translate: 19px -157px;
+        }
+     94.5% {
+        translate: 19px -148px;
+        }
+     94.6% {
+        translate: 19px -139px;
+        }
+     94.7% {
+        translate: 19px -131px;
+        }
+     94.8% {
+        translate: 19px -121px;
+        }
+     94.9% {
+        translate: 19px -112px;
+        }
+     95% {
+        translate: 18px -102px;
+        }
+     95.1% {
+        translate: 16px -92px;
+        }
+     95.2% {
+        translate: 14px -82px;
+        }
+     95.3% {
+        translate: 12px -72px;
+        }
+     95.5% {
+        translate: 9px -62px;
+        }
+     95.6% {
+        translate: 8px -53px;
+        }
+     95.7% {
+        translate: 6px -44px;
+        }
+     95.8% {
+        translate: 5px -34px;
+        }
+     95.9% {
+        translate: 4px -26px;
+        }
+     96% {
+        translate: 3px -18px;
+        }
+     96.1% {
+        translate: 2px -10px;
+        }
+     96.2% {
+        translate: 2px -5px;
+        }
+     96.3% {
+        translate: 1px 0px;
+        }
+     96.4% {
+        translate: 0px 5px;
+        }
+     96.6% {
+        translate: 0px 9px;
+        }
+     96.7% {
+        translate: -1px 13px;
+        }
+     96.8% {
+        translate: -2px 16px;
+        }
+     96.9% {
+        translate: -2px 17px;
+        }
+     97% {
+        translate: -3px 17px;
+        }
+     97.2% {
+        translate: -4px 17px;
+        }
+     97.7% {
+        translate: -5px 16px;
+        }
+     97.8% {
+        translate: -5px 15px;
+        }
+     97.9% {
+        translate: -5px 14px;
+        }
+     98.1% {
+        translate: -5px 13px;
+        }
+     98.3% {
+        translate: -5px 12px;
+        }
+     100% {
+        translate: -3px 9px;
+        }
+  }
+  
+  .demo-el1 {
+     position: absolute;
+     left: 44px;
+     top: 275px;
+     animation-name: demo1-ani;
+     animation-duration: 7535ms;
+     animation-timing-function: linear;
+  }
+  
+  .demo-el2 {
+     position: absolute;
+     left: 10px;
+     top: 20px;
+     animation-name: demo1-ani;
+     animation-duration: 7535ms;
+     animation-timing-function: linear;
+     animation-delay:.5s;
+  }
+  
+  .demo-el3 {
+     position: absolute;
+     left: 0px;
+     top: 120px;
+     animation-name: demo1-ani;
+     animation-duration: 7535ms;
+     animation-timing-function: linear;
+     animation-delay:.25s;
+  }

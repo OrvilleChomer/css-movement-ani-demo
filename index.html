@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no,width=device-width">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">	
+        <meta name="apple-mobile-web-app-title" content="CSS Ani">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name='mobile-web-app-capable' content='yes'>
+        <meta name='msapplication-square310x310logo' content='./icons/icon310x310.png'>
+        <meta HTTP-EQUIV="PRAGMA" content="NO-CACHE" />
+        <link rel="stylesheet" media="all" href="./styles.css" />
+    </head>
+    <body>
+        <div class="tabs">
+            <div class="tab tab-active" id="recordTab">Record Animation</div>
+            <div class="tab tab-disabled" style="left:160px;" id="testAniTab">Test Animation</div>
+            <div class="tab tab-disabled" style="left:285px;" id="cssCodeTab"><span class="css-code-icon">{ }</span> CSS Code</div>
+          </div>
+
+
+          <div class="tab-cntr" id="recordTabCntr">
+            <label style="display:none;">CSS Class Name:</label>
+            <input id="txtCssClassName" style="display:none;">
+            <div id="cntr">
+              
+              <div id="drawingCursor" class="basic-ani-cursor"></div>
+              <div id="aniStart" class="basic-ani-cursor start-ani-cursor" style="display:none;">start</div>
+              <div id="hlp">Move your Mouse to a Starting Point</div>
+            </div>
+           </div><!-- tab-cntr -->
+          
+          <div class="tab-cntr" id="testAniTabCntr" style="display:none;" >
+            <style id="testCss"></style>
+            <div class="stage">
+              <div id="aniObj" class="basic-ani-cursor"></div>    
+            </div>
+          </div>
+          
+          <div class="tab-cntr" id="cssCodeTabCntr" style="display:none;" >
+            <textarea cols="120" rows="28" id="output">CSS Output will go here in this text box...
+          
+          You can then copy and paste it into your own project.
+            </textarea>
+            <div class="buttonStrip">
+              <button id="btnCopy">Copy CSS to Clipboard</button>
+              <button id="btnGenPen">Generate a New Pen!</button>
+              <form action='https://codepen.io/pen/define' method='POST' target='_blank' id="frm">
+                <input type='hidden' name='data' id='cpdata'>
+              </form>
+            </div>
+          </div>
+          
+          <div id="attract">
+            <div class="s-title">CSS Animation Recorder</div>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/721952/soap2.png" width="80" class="demo-el1">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/721952/soap2.png" width="60" class="demo-el2">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/721952/soap2.png" width="50" class="demo-el3">
+          </div>      
+          
+          <script src="./app.js" defer></script>
+    </body>
+</html>
